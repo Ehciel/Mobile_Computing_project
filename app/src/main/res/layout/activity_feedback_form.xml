@@ -1,0 +1,197 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Back "X" button at the top-right -->
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_close"
+            android:contentDescription="Close Form"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:elevation="8dp"
+            android:padding="24dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Satisfaction Survey"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#FF6200EE"
+                    android:paddingBottom="16dp"
+                    android:layout_gravity="center"/>
+
+                <!-- Overall Satisfaction -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Overall Satisfaction"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp"/>
+                <EditText
+                    android:id="@+id/etSatisfaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Enter Satisfaction Rating (1-5)"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Reliability of Service -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reliability of Service"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp"/>
+                <RadioGroup
+                    android:id="@+id/rgReliability"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <RadioButton android:id="@+id/rbReliabilityExcellent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Excellent"/>
+                    <RadioButton android:id="@+id/rbReliabilityGood" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Good"/>
+                    <RadioButton android:id="@+id/rbReliabilityFair" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fair"/>
+                    <RadioButton android:id="@+id/rbReliabilityPoor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Poor"/>
+                    <RadioButton android:id="@+id/rbReliabilityVeryPoor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Very Poor"/>
+                </RadioGroup>
+
+                <!-- Responsiveness to Issues -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Responsiveness to Issues"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp"/>
+                <EditText
+                    android:id="@+id/etResponsiveness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Describe Responsiveness"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Customer Service Experience -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Service Experience"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp"/>
+                <RadioGroup
+                    android:id="@+id/rgCustomerService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <RadioButton android:id="@+id/rbCustomerServiceExcellent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Excellent"/>
+                    <RadioButton android:id="@+id/rbCustomerServiceGood" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Good"/>
+                    <RadioButton android:id="@+id/rbCustomerServiceFair" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fair"/>
+                    <RadioButton android:id="@+id/rbCustomerServicePoor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Poor"/>
+                    <RadioButton android:id="@+id/rbCustomerServiceVeryPoor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Very Poor"/>
+                </RadioGroup>
+
+                <!-- Billing Process -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Billing Process"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp"/>
+                <EditText
+                    android:id="@+id/etBillingProcess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Describe Billing Process"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Communication -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Communication"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp"/>
+                <EditText
+                    android:id="@+id/etCommunication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Describe Communication"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Service Improvement Suggestions -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Service Improvement Suggestions"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp"/>
+                <EditText
+                    android:id="@+id/etSuggestions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Suggestions"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Additional Comments -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Additional Comments"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp"/>
+                <EditText
+                    android:id="@+id/etComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Comments"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="12dp"
+                    android:layout_marginBottom="24dp"/>
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:backgroundTint="#FF6200EE"
+                    android:textColor="#FFFFFF"
+                    android:padding="12dp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

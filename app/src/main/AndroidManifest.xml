@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.chili.shockback">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ShockBack"
+        tools:targetApi="31">
+
+        <!-- Main Activity as Launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Other Activities -->
+        <activity
+            android:name=".FeedbackListActivity"
+            android:exported="true" /> <!-- Set to true if it's accessible from another activity -->
+        <activity
+            android:name=".FeedbackFormActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ContactUsActivity"
+            android:exported="true" /> <!-- Set to true if you are navigating to it -->
+
+    </application>
+
+</manifest>
